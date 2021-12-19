@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: ${ENV_START}  #Github에 올라가있는 버전의 이름
+  application:
+    name: visitor #Github에 올라가있는 App의 이름
+  config:
+    import: ${ENV_CONFIG_URL}
+
+# <actuator관련>
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
